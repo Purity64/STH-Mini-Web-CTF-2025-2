@@ -62,4 +62,26 @@ window.db.ref("/").get().then(function(snapshot) {
 <br>
 ![รูปภาพbaserunnertool](read.png)
 <br>
+จาดนั้นก็หาข้อมูล user ตัวเองก็จะได้ `` RjVUrCIRDJQmsfmJTnnHLqLDY7m2 ``
+<br>
+![รูปภาพbaserunnertool](read2.png)
+จากนั้นเราจะเปลี่ยน role: "admin", controlUnlocked: true
+ด้วย <br>
+
+```
+window.db.ref("users/RjVUrCIRDJQmsfmJTnnHLqLDY7m2").update({
+    role: "admin",
+    controlUnlocked: true
+})
+.then(() => {
+    window.displayMessage("🎉 Updated to admin!");
+})
+.catch(error => {
+    window.displayError(`❌ Error: ${error}`);
+});
+
+```
+![รูปภาพbaserunnertool](edit.png)
+<br>
+จากนั้นก็ login เข้าสู่ระบบ
 ## สรุป
