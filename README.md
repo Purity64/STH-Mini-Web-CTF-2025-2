@@ -35,7 +35,7 @@ STH Mini Web CTF 2025/2 Write-up
 และในวินาทีที่ได้เจอ` apikey `และด้วยประสบการณ์พร้อม common sense ที่มีมายาวนานผมก็เลยย
 ![รูปภาพgpt1](gpt.png)
 จากที่ GPT สรุปมา` apikey `ที่ได้มาคือข้อมูลเกี่ยวกับ firebase-config ที่อาจจะสามราถเพิ่มหรือแก้ไขข้อมูลของ user ฝั่ง backendได้
-จากนั้นผมก็ตีกับแชทอยู่ 5 ซม. แต่ก็ไม่ได้อะไรเลย จากนั้นก็เริ่มหาข้อมูลใน youtube และได้ไปเจอช่อง HackHunt [คลิปนี้](https://www.youtube.com/watch?v=1KPd5gRQbKw) โดยเนื้อหาในคลิปมีการเข้าไปที่เว็บ [HackTricks](https://book.hacktricks.wiki/en/index.html) จากนั้นผมก็ได้หาข้อมูลไปเลื่อยๆ <br> จนกระทั้งผมได้เจอ blog ที่เขียนเกี่ยวกับ` firebase-config ` [ลิ๊งนี้](https://cloud.hacktricks.wiki/en/pentesting-cloud/gcp-security/gcp-services/gcp-firebase-enum.html?fbclid=IwY2xjawOJZLNleHRuA2FlbQIxMABicmlkETFldHpGWm1UY0ZYdVY5RHB3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHvGi_PRhTLWWBnk9HyDnIJe0V5WjhRmkw55SKCopJrKEhzC6pmZ11zJXc6pi_aem_-kr0jU5zgkXgYOaChwDE1A#authenticated-enum) และได้เจอ tool [baserunner](https://www.youtube.com/watch?v=1KPd5gRQbKw) ของคุณ [dmyates](https://github.com/dmyates)
+จากนั้นผมก็ตีกับแชทอยู่ 5 ซม. แต่ก็ไม่ได้อะไรเลย จากนั้นก็เริ่มหาข้อมูลใน youtube และได้ไปเจอช่อง HackHunt [คลิปนี้](https://www.youtube.com/watch?v=1KPd5gRQbKw) โดยเนื้อหาในคลิปมีการเข้าไปที่เว็บ [HackTricks](https://book.hacktricks.wiki/en/index.html) จากนั้นผมก็ได้หาข้อมูลไปเลื่อยๆ <br> จนกระทั้งผมได้เจอ blog ที่เขียนเกี่ยวกับ` firebase-config ` [ลิ๊งนี้](https://cloud.hacktricks.wiki/en/pentesting-cloud/gcp-security/gcp-services/gcp-firebase-enum.html?fbclid=IwY2xjawOJZLNleHRuA2FlbQIxMABicmlkETFldHpGWm1UY0ZYdVY5RHB3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHvGi_PRhTLWWBnk9HyDnIJe0V5WjhRmkw55SKCopJrKEhzC6pmZ11zJXc6pi_aem_-kr0jU5zgkXgYOaChwDE1A#authenticated-enum) และได้เจอ tool [baserunner](https://github.com/iosiro/baserunner?fbclid=IwY2xjawOKFQdleHRuA2FlbQIxMABicmlkETE0b01rdFZEd3dyeVBGdzhoc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHoWMYf5JLhZHvTKlWs-wSxx1fUeZZiQUQGIIo52w8adwvcsDMsf459_9KDfC_aem_XaHzBoiRdTBBlS9e9ATiag) ของคุณ [dmyates](https://github.com/dmyates)
 ![รูปภาพbaserunner](baserunner.png)
 ![รูปภาพbaserunnerui](baserunnerui.png)
 โอเคเมื่อได้ tool มา
@@ -102,7 +102,7 @@ API key
 ปุ่มที่ซ่อนอยู่
 ![รูปภาพadminbutton](button.png)
 <br>
-ใช้ tool [baserunner](https://www.youtube.com/watch?v=1KPd5gRQbKw)
+ใช้ tool [baserunner](https://github.com/iosiro/baserunner?fbclid=IwY2xjawOKFQdleHRuA2FlbQIxMABicmlkETE0b01rdFZEd3dyeVBGdzhoc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHoWMYf5JLhZHvTKlWs-wSxx1fUeZZiQUQGIIo52w8adwvcsDMsf459_9KDfC_aem_XaHzBoiRdTBBlS9e9ATiag)
 <br>
 ![รูปภาพbaserunnerui](baserunnerui.png)
 <br>
@@ -150,7 +150,7 @@ window.db.ref("users/RjVUrCIRDJQmsfmJTnnHLqLDY7m2").update({
 <br>
 ![รูปภาพbaserunnertool](falgsth.png)
 ## Tool
-tool [baserunner](https://www.youtube.com/watch?v=1KPd5gRQbKw)
+tool [baserunner](https://github.com/iosiro/baserunner?fbclid=IwY2xjawOKFQdleHRuA2FlbQIxMABicmlkETE0b01rdFZEd3dyeVBGdzhoc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHoWMYf5JLhZHvTKlWs-wSxx1fUeZZiQUQGIIo52w8adwvcsDMsf459_9KDfC_aem_XaHzBoiRdTBBlS9e9ATiag)
 <br>
 ของ [dmyates](https://github.com/dmyates)
 <br>
