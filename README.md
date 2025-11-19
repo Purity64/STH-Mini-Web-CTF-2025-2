@@ -64,7 +64,8 @@ window.db.ref("/").get().then(function(snapshot) {
 <br>
 จาดนั้นก็หาข้อมูล user ตัวเองก็จะได้ `` RjVUrCIRDJQmsfmJTnnHLqLDY7m2 ``
 <br>
-![รูปภาพbaserunnertool](read2.png)
+![รูปภาพbaserunnertool](reduser.png)
+<br>
 จากนั้นเราจะเปลี่ยน role: "admin", controlUnlocked: true
 ด้วย <br>
 
